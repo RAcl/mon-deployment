@@ -3,7 +3,7 @@
 ## Description:
 Based on the result of "kubectl top pod" (CPU &amp; Memory), it calculates the average and records the average and maximum consumption recorded in each of the pods of the deployments.app of a namespace of a context.
 
-monitor.sh use three simple question, Context, Namespace and Minutes, and start. Then show the temporal file and his cycle number.
+**monitor.sh** use three simple question, Context, Namespace and Minutes, and start. Then show the temporal file and his cycle number.
 
 Examples:
 - At the run
@@ -22,10 +22,11 @@ Examples:
   nginxpxy-operator     1.14     27.48        3       29  1.00
   ```
 
-view-tmp.sh allows you to view the snapshot of the temporal file, with ```watch``` you can view the changes.
+**view-tmp.sh** allows you to view the snapshot of the temporal file, with ```watch``` you can view the changes.
 
 ## Requires:
 - bash
+- bc
 - column
 - kubectl
 - kubectx
