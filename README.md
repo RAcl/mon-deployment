@@ -5,13 +5,22 @@ Based on the result of "kubectl top pod" (CPU &amp; Memory), it calculates the a
 
 monitor.sh use three simple question, Context, Namespace and Minutes, and start. Then show the temporal file and his cycle number.
 
-Example:
-```txt
-Working in namespace "kube-system" of "cluster-dev" by "1440" minutes
-tmp-file: /tmp/tmp.pynyvz7c7p
-ciclo: 94 de 6863
-waiting...
-```
+Examples:
+- At the run
+  ```txt
+  Working in namespace "kube-system" of "cluster-dev" by "1440" minutes
+  tmp-file: /tmp/tmp.pynyvz7c7p
+  ciclo: 94 de 6863
+  waiting...
+  ```
+
+- At the end:
+  ```txt
+  DEPLOY             AVG-CPU   AVG-MEM  MAX-CPU  MAX-MEM  PODS
+  api-server          176.35  20724.30     1531    26759  4.00
+  front                 7.74    163.59      200      185  8.00
+  nginxpxy-operator     1.14     27.48        3       29  1.00
+  ```
 
 view-tmp.sh allows you to view the snapshot of the temporal file, with ```watch``` you can view the changes.
 
